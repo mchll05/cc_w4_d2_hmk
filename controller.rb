@@ -2,6 +2,9 @@ require ('sinatra')
 require ('sinatra/contrib/all')
 require_relative ('./models/rock_scissors_paper')
 
+get '/' do
+  erb(:welcome)
+end
 
 get '/rps/:hand1/:hand2' do
   rock_scissors_paper = Rock_Scissors_Paper.new()
